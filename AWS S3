@@ -1,0 +1,14 @@
+
+
+When one uploads an object to a S3 bucket.
+
+Is there an API to check if the upload was successful ?
+
+AmazonS3 amazonS3 = AmazonS3ClientBuilder.standard() .with* ... .build(); PutObjectResult result = this.amazonS3.putObject(s3BucketName, s3Key, file);
+
+I read some solutions where
+
+the MD5 checksum is compared to the file's MD5 signature
+or the last modified date is compared
+
+PS : I came from this old question How can I get upload success status with Amazon Web Services?
